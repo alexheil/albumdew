@@ -1,1 +1,9 @@
 Welcome!
+
+<% if artist_signed_in? %>
+  <%= current_artist.username %>
+<% end %>
+
+<% if fan_signed_in? %>
+  <%= current_fan.username %>
+<% end %>
