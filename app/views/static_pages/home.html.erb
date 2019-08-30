@@ -2,6 +2,7 @@ Welcome!
 
 <% if artist_signed_in? %>
   <%= current_artist.username %>
+  <%= link_to "Sign out", sign_out_path %>
 <% end %>
 
 <% if fan_signed_in? %>

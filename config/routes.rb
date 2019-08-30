@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :fans
-  devise_for :artists
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "static_pages#home"
@@ -16,8 +14,8 @@ Rails.application.routes.draw do
 
   devise_for :fans, controllers: { sessions: "fans/sessions", passwords: "fans/passwords", registrations: "fans/registrations", confirmations: "fans/confirmations",  unlocks: "fans/unlocks"}
 
-  devise_scope :artist do
-    get 'sign_out', to: 'fans/sessions#destroy', path: 'sign-out'
+  devise_scope :fan do
+    get 'sign_out', to: 'fans/sessions#destroy'
   end
 
 end
