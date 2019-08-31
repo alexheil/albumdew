@@ -1,6 +1,9 @@
 Welcome!
 
-<%= link_to "Sign Up Artist", new_artist_registration_path %>
+<%= link_to "Sign Up Artist", new_artist_registration_path %></br>
+<%= link_to "Sign Up Fan", new_fan_registration_path %></br>
+<%= link_to "Sign In Artist", new_artist_session_path %></br>
+<%= link_to "Sign In Fan", new_fan_session_path %></br>
 
 <% if artist_signed_in? %>
   <%= current_artist.email %>
