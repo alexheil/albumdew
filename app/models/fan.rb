@@ -15,7 +15,7 @@ class Fan < ApplicationRecord
   before_save :downcase_username
 
   def validate_username
-    if Artist.where(email: username).exists?
+    if Fan.where(email: username).exists?
       errors.add(:username, :invalid)
     end
   end

@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   resources :fans, controller: 'fans/fans', only: :show # add do
     #resource :profile, controller: 'profiles/profiles', only: [:edit, :update]
   #end
+  
 
 end
