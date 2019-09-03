@@ -10,6 +10,7 @@ class Artist < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { maximum: 50 }, format: { with: /\A[a-zA-Z0-9]+\Z/i }
   validate :validate_username
 
+  has_many :
 
   before_save :should_generate_new_friendly_id?, if: :username_changed?
   before_save :downcase_username
