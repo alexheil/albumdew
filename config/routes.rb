@@ -12,9 +12,10 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'artists/sessions#destroy', path: 'sign-out'
   end
 
-  resources :artists, controller: 'artists/artists', only: :show # add do
+  resources :artists, controller: 'artists/artists', only: :show do
+    resources :albums, controller: 'artists/albums', except: :index
     #resource :profile, controller: 'profiles/profiles', only: [:edit, :update]
-  #end
+  end
 
   devise_for :fans, controllers: { sessions: "fans/sessions", passwords: "fans/passwords", registrations: "fans/registrations", confirmations: "fans/confirmations",  unlocks: "fans/unlocks"}
 
@@ -25,5 +26,5 @@ Rails.application.routes.draw do
   resources :fans, controller: 'fans/fans', only: :show # add do
     #resource :profile, controller: 'profiles/profiles', only: [:edit, :update]
   #end
-  
+
 end
