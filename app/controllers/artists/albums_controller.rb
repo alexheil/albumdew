@@ -50,7 +50,6 @@ class Artists::AlbumsController < ApplicationController
     redirect_to artist_albums_path(@artist)
   end
 
-  
   private
 
     def set_artist
