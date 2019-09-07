@@ -32,6 +32,7 @@ class Artists::AlbumsController < ApplicationController
   def edit
     @album = Album.friendly.find(params[:id])
   end
+  
 
   def update
     @album = Album.friendly.find(params[:id])
